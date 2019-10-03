@@ -105,7 +105,7 @@ add_shortcode(
 
 		return sprintf(
 			sprintf(
-				'<div class="alert alert-primary">%s</div>',
+				'<div class="alert alert-primary">%s<br><a href="https://darksky.net/poweredby/">Powered by Dark Sky</a></div>',
 				sprintf(
 					/* translators: %s is the temperature in degrees Fahrenheit. */
 					esc_html__(
