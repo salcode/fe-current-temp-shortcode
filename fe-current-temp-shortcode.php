@@ -118,3 +118,15 @@ add_shortcode(
 		);
 	}
 );
+
+/**
+ * On plugin deactivtion, delete transient.
+ */
+register_deactivation_hook( __FILE__, 'fe_wp_temp_delete_transient' );
+
+/**
+ * Delete Transient.
+ */
+function fe_wp_temp_delete_transient() {
+	delete_transient( 'fe_wp_temp' );
+}
